@@ -1,11 +1,16 @@
 # Unlocking-Hospitality-Trends-in-PowerBI
 
-Data Insights of Luxe Hotel Operations
-Aim:
+**Description**
 
-To conduct a thorough data analysis of Luxe's operations data and stay competitive while making data-informed decisions
+AtliQ Grands owns multiple five-star hotels across India. They have been in the hospitality industry for the past 20 years. Due to strategic moves from other competitors and ineffective decision-making in management, AtliQ Grands are losing its market share and revenue in the luxury/business hotels category. As a strategic move, the managing director of AtliQ Grands wanted to incorporate “Business and Data Intelligence” to regain their market share and revenue. However, they do not have an in-house data analytics team to provide them with these insights.
 
-Steps
+Their revenue management team had decided to hire a 3rd party service provider to provide them with insights from their historical data.
+
+**Aim:**
+
+To conduct a thorough data analysis of AtliQ Grands data and provide insights to the Revenue Team in the Hospitality Domain.
+
+**Steps**
 
        1. Understanding problem statement and Business Model
        2. Data Collection and Understanding
