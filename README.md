@@ -20,55 +20,57 @@ To conduct a thorough data analysis of AtliQ Grands data and provide insights to
        6. Recommendations
 ===========================================================================
 
-LUXE Business Model
+**AtliQ Grand Business Model**
 
-Luxe is a 20 year old hotel chain which operates in four cities of India Delhi, Mumbai, Bangalore and Hyderabad.
+AtliQ Grand operates in four cities of India:  **Delhi, Mumbai, Bangalore and Hyderabad.**
 
-They have the following types of properties under Business and luxury category:
+They have the following types of properties under **Business and luxury category:**
 
-Luxe Grands
-Luxe Exotica
-Luxe City
-Luxe Blu
-Luxe Bay
-Luxe Palace
-Luxe Seasons
-These hotels have the following room classes:
+AtliQ Grands
+AtliQ Exotica
+AtliQ City
+AtliQ Blu
+AtliQ Bay
+AtliQ Palace
+AtliQ Seasons
+
+These hotels have the following **room classes:**
 
 Standard
 Elite
 Premium
 Presidential
-Hotel bookings can be done from various booking platforms like the company's website, 3rd party booking websites or direct offline.
 
-booking_status are Checked Out, Cancelled, No Show
+Hotel bookings can be done from various **booking platforms** like the company's website, 3rd party booking websites or direct offline.
+
+**booking_status** are Checked Out, Cancelled, No Show
 
 ===========================================
 
-Data Collection and Understanding
+**Data Collection and Understanding**
 
 Data is extracted from Compay's Datawarehouse
 
-dim_date.csv
+**dim_date.csv**
 
 Shape: (92,4)
 Columns: date, mmmyy, weekno, day_type (weekday/weekend)
 
-dim_hotels.csv
+**dim_hotels.csv**
 
 Shape: (25,4)
 Columns: property_id, property_name, category, city
 
-dim_rooms.csv
+**dim_rooms.csv**
 
 Shape: (4,2)
 Columns: room_id, room_class
 
-fact_aggregated_bookings.csv
+**fact_aggregated_bookings.csv**
 
 Shape: (9200, 5) Columns: property_id, check_in_date, room_category, successful_bookings, capacity
 
-fact_bookings.csv
+**fact_bookings.csv**
 
 Shape: (134590, 12) Columns: booking_id, property_id, booking_date, check_in_date, checkout_date, no_guests, room_category, booking_platform, ratings_given (1-5), booking_status, revenue_generated, revenue_realized
 
@@ -81,7 +83,7 @@ The occupancy percentage (often called occ%) measures how many of the hotel's av
            occ% =  (Rooms Sold / Total Rooms Available) * 100
 ===========================================
 
-Data Cleaning
+**Data Cleaning**
 
 12 records out of 134578 records have -ve no of guests, have been removed
 
