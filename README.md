@@ -26,20 +26,20 @@ AtliQ Grand operates in four cities of India:  **Delhi, Mumbai, Bangalore and Hy
 
 They have the following types of properties under **Business and luxury category:**
 
-AtliQ Grands
-AtliQ Exotica
-AtliQ City
-AtliQ Blu
-AtliQ Bay
-AtliQ Palace
-AtliQ Seasons
+       AtliQ Grands
+       AtliQ Exotica
+       AtliQ City
+       AtliQ Blu
+       AtliQ Bay
+       AtliQ Palace
+       AtliQ Seasons
 
 These hotels have the following **room classes:**
 
-Standard
-Elite
-Premium
-Presidential
+       Standard
+       Elite
+       Premium
+       Presidential
 
 Hotel bookings can be done from various **booking platforms** like the company's website, 3rd party booking websites or direct offline.
 
@@ -95,14 +95,16 @@ Done modelling using **Star Schema** where the fact_tables are at the centre of 
 
 Below are all **one to many** relationships
 
-fact_bookins (property_id) --> dim_hotels (property_id)  
-fact_agg_bookings (property_id) --> dim_hotels (property_id)
-dim_date (date) --> fact_bookings (check_in_date)
-dim_date (date) --> fact_agg_bookings (check_in_date)
-dim_rooms (room_id) --> fact_bookings (room_category)
-dim_rooms (room_id) --> fact_agg_bookings (room_category)
+       fact_bookins (property_id) --> dim_hotels (property_id)  
+       fact_agg_bookings (property_id) --> dim_hotels (property_id)
+       dim_date (date) --> fact_bookings (check_in_date)
+       dim_date (date) --> fact_agg_bookings (check_in_date)
+       dim_rooms (room_id) --> fact_bookings (room_category)
+       dim_rooms (room_id) --> fact_agg_bookings (room_category)
 
 **Building Metrics using DAX:**
+
+
 
 
 
