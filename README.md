@@ -91,6 +91,9 @@ Below are all **one to many** relationships
 
 **Data Cleaning/Transformations**
 
+
+Week 32 has only one day, hence filtering that week from data
+
 According to the Client/Subject matter Expert Fridays and Saturdays are considered **Weekend** and Sunday to Thursday is considered **weekday**. 
 But in dim_date, after verification we realized the weekends are saturday and sunday. So I removed day_type column in dim_date.
 and will create new day_type column according to the business logic.
