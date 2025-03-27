@@ -83,11 +83,6 @@ The occupancy percentage (often called occ%) measures how many of the hotel's av
            occ% =  (Rooms Sold / Total Rooms Available) * 100
 ===========================================
 
-**Data Cleaning**
-
-According to the Client/Subject matter Expert Fridays and Saturdays are considered **Weekend** and Sunday to Thursday is considered **weekday**. 
-But in dim_date, after verification we realized the weekends are satuday and sunday. So I am removing day_type column in dim_date and to create new 
-day_type column according to the business logic.
 
 **Data Modelling**
 
@@ -102,9 +97,33 @@ Below are all **one to many** relationships
        dim_rooms (room_id) --> fact_bookings (room_category)
        dim_rooms (room_id) --> fact_agg_bookings (room_category)
 
-**Building Metrics using DAX:**
+**Data Cleaning/Transformations**
 
+According to the Client/Subject matter Expert Fridays and Saturdays are considered **Weekend** and Sunday to Thursday is considered **weekday**. 
+But in dim_date, after verification we realized the weekends are saturday and sunday. So I removed day_type column in dim_date.
+and will create new day_type column according to the business logic.
 
+**Creating Calculated Columns using DAX:**
+
+Created a new column week number (WN) in dim_date table as:
+WN = WEEKNUM(dim_date[date])
+
+According to the Client/Subject matter Expert Fridays and Saturdays are considered **Weekend** and Sunday to Thursday is considered **weekday**. 
+But in dim_date, after verification we realized the weekends are satuday and sunday. So I removed day_type column in dim_date.
+ 
+To create new day_type column according to the business logic.
+
+day_type = WEEKDAY(dim_date[date])
+
+this will give numbers like sunday -1, monday -2 and so on saturday - 7
+
+Modified the above formula as per our requirement.
+
+day_type = IF(WEEKDAY(dim_date[date])>5,"Weekend","Weekday")
+
+**Creating Measures using DAX:**
+
+Attached the measures file
 
 
 
