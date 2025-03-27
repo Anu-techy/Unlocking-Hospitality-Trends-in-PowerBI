@@ -85,6 +85,29 @@ The occupancy percentage (often called occ%) measures how many of the hotel's av
 
 **Data Cleaning**
 
+According to the Client/Subject matter Expert Fridays and Saturdays are considered **Weekend** and Sunday to Thursday is considered **weekday**. 
+But in dim_date, after verification we realized the weekends are satuday and sunday. So I am removing day_type column in dim_date and to create new 
+day_type column according to the business logic.
+
+**Data Modelling**
+
+Done modelling using **Star Schema** where the fact_tables are at the centre of the data model and the dimension tables are connected to them from sides.]
+
+Below are all **one to many** relationships
+
+fact_bookins (property_id) --> dim_hotels (property_id)  
+fact_agg_bookings (property_id) --> dim_hotels (property_id)
+dim_date (date) --> fact_bookings (check_in_date)
+dim_date (date) --> fact_agg_bookings (check_in_date)
+dim_rooms (room_id) --> fact_bookings (room_category)
+dim_rooms (room_id) --> fact_agg_bookings (room_category)
+
+**Building Metrics using DAX:**
+
+
+
+
+
 12 records out of 134578 records have -ve no of guests, have been removed
 
 df_bookings["revenue_generated"].max() is in millions clearly suggesting presence of outliers in that column. Hence filtered 5 outliers whose values > mean + 3 * std
